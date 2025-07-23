@@ -1,0 +1,67 @@
+<style>
+    /* Custom styles for the Inter font */
+    body {
+        font-family: "Inter", sans-serif;
+    }
+    /* Hide pages by default */
+    .page {
+        display: none;
+    }
+    /* Show active page */
+    .page.active {
+        display: block;
+    }
+</style>
+
+<script>
+    // Get references to all page elements
+    const homePage = document.getElementById('home-page');
+    const billingPage = document.getElementById('billing-page');
+    const thankYouPage = document.getElementById('thank-you-page');
+
+    // Get references to buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    const confirmOrderButton = document.getElementById('confirm-order-btn');
+    const homeButton = document.getElementById('home-btn');
+
+    /**
+     * Function to show a specific page and hide others.
+     * @param {HTMLElement} pageToShow - The page element to make active.
+     */
+    function showPage(pageToShow) {
+        // Hide all pages first
+        homePage.classList.remove('active');
+        billingPage.classList.remove('active');
+        thankYouPage.classList.remove('active');
+
+        // Show the desired page
+        pageToShow.classList.add('active');
+    }
+
+    // Event Listeners
+
+    // Add to Cart buttons (on home page)
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            showPage(billingPage); // Navigate to billing page
+        });
+    });
+
+    // Confirm Order button (on billing page)
+    confirmOrderButton.addEventListener('click', () => {
+        showPage(thankYouPage); // Navigate to thank you page
+    });
+
+    // Home button (on thank you page)
+    homeButton.addEventListener('click', () => {
+        showPage(homePage); // Navigate back to home page
+    });
+
+    // Initialize: Show the home page when the script loads
+    document.addEventListener('DOMContentLoaded', () => {
+        // This assumes that the script is placed at the end of the body
+        // and that the home-page div is initially set to 'active'
+        // or you can explicitly call showPage(homePage); here if needed.
+        showPage(homePage); // Ensure home page is shown on load
+    });
+</script>
