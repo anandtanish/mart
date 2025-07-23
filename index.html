@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5G62M872');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Home Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        /* Hide pages by default */
+        .page {
+            display: none;
+        }
+        /* Show active page */
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G62M872"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Main container for the application -->
+    <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-2xl">
+
+        <!-- Home Page Content -->
+        <div id="home-page" class="page active">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Welcome to Our Supermarket!</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-blue-50 rounded-lg p-4 shadow-md flex flex-col items-center">
+                    <img src="https://placehold.co/150x150/ADD8E6/000000?text=Apples" alt="Apples" class="w-32 h-32 object-cover rounded-md mb-4">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">Fresh Apples</h2>
+                    <p class="text-gray-600 mb-4">$2.99 / kg</p>
+                    <button class="add-to-cart-btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-green-50 rounded-lg p-4 shadow-md flex flex-col items-center">
+                    <img src="https://placehold.co/150x150/90EE90/000000?text=Milk" alt="Milk" class="w-32 h-32 object-cover rounded-md mb-4">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">Organic Milk</h2>
+                    <p class="text-gray-600 mb-4">$3.50 / liter</p>
+                    <button class="add-to-cart-btn bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-yellow-50 rounded-lg p-4 shadow-md flex flex-col items-center">
+                    <img src="https://placehold.co/150x150/FFD700/000000?text=Bread" alt="Bread" class="w-32 h-32 object-cover rounded-md mb-4">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">Whole Wheat Bread</h2>
+                    <p class="text-gray-600 mb-4">$2.25 / loaf</p>
+                    <button class="add-to-cart-btn bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-purple-50 rounded-lg p-4 shadow-md flex flex-col items-center">
+                    <img src="https://placehold.co/150x150/DDA0DD/000000?text=Eggs" alt="Eggs" class="w-32 h-32 object-cover rounded-md mb-4">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">Farm Fresh Eggs</h2>
+                    <p class="text-gray-600 mb-4">$4.00 / dozen</p>
+                    <button class="add-to-cart-btn bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
